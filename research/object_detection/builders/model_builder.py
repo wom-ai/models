@@ -52,7 +52,9 @@ from object_detection.models.ssd_mobilenet_v2_feature_extractor import SSDMobile
 from object_detection.models.ssd_mobilenet_v2_fpn_feature_extractor import SSDMobileNetV2FpnFeatureExtractor
 from object_detection.models.ssd_mobilenet_v2_fpn_keras_feature_extractor import SSDMobileNetV2FpnKerasFeatureExtractor
 from object_detection.models.ssd_mobilenet_v2_keras_feature_extractor import SSDMobileNetV2KerasFeatureExtractor
+from object_detection.models.ssd_bogusnet_keras_feature_extractor import SSDBogusnetKerasFeatureExtractor
 from object_detection.models.ssd_pnasnet_feature_extractor import SSDPNASNetFeatureExtractor
+from object_detection.models.ssd_bogusnet_feature_extractor import SSDBogusnetFeatureExtractor
 from object_detection.predictors import rfcn_box_predictor
 from object_detection.predictors import rfcn_keras_box_predictor
 from object_detection.predictors.heads import mask_head
@@ -78,6 +80,7 @@ SSD_FEATURE_EXTRACTOR_CLASS_MAP = {
         ssd_resnet_v1_ppn.SSDResnet152V1PpnFeatureExtractor,
     'embedded_ssd_mobilenet_v1': EmbeddedSSDMobileNetV1FeatureExtractor,
     'ssd_pnasnet': SSDPNASNetFeatureExtractor,
+    'ssd_bogusnet': SSDBogusnetFeatureExtractor,
 }
 
 SSD_KERAS_FEATURE_EXTRACTOR_CLASS_MAP = {
@@ -85,6 +88,7 @@ SSD_KERAS_FEATURE_EXTRACTOR_CLASS_MAP = {
     'ssd_mobilenet_v1_fpn_keras': SSDMobileNetV1FpnKerasFeatureExtractor,
     'ssd_mobilenet_v2_keras': SSDMobileNetV2KerasFeatureExtractor,
     'ssd_mobilenet_v2_fpn_keras': SSDMobileNetV2FpnKerasFeatureExtractor,
+    # 'ssd_bogusnet_keras': SSDBogusnetKerasFeatureExtractor,
 }
 
 # A map of names to Faster R-CNN feature extractors.
