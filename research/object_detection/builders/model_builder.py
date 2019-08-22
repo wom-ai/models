@@ -54,7 +54,7 @@ from object_detection.models.ssd_mobilenet_v2_fpn_keras_feature_extractor import
 from object_detection.models.ssd_mobilenet_v2_keras_feature_extractor import SSDMobileNetV2KerasFeatureExtractor
 from object_detection.models.ssd_bogusnet_keras_feature_extractor import SSDBogusnetKerasFeatureExtractor
 from object_detection.models.ssd_pnasnet_feature_extractor import SSDPNASNetFeatureExtractor
-from object_detection.models.ssd_bogusnet_feature_extractor import SSDBogusnetFeatureExtractor
+from object_detection.models.ssd_shufflenet_v2_feature_extractor import SSDShuffleNetV2FeatureExtractor
 from object_detection.predictors import rfcn_box_predictor
 from object_detection.predictors import rfcn_keras_box_predictor
 from object_detection.predictors.heads import mask_head
@@ -80,7 +80,7 @@ SSD_FEATURE_EXTRACTOR_CLASS_MAP = {
         ssd_resnet_v1_ppn.SSDResnet152V1PpnFeatureExtractor,
     'embedded_ssd_mobilenet_v1': EmbeddedSSDMobileNetV1FeatureExtractor,
     'ssd_pnasnet': SSDPNASNetFeatureExtractor,
-    'ssd_bogusnet': SSDBogusnetFeatureExtractor,
+    'ssd_shufflenet_v2': SSDShuffleNetV2FeatureExtractor,
 }
 
 SSD_KERAS_FEATURE_EXTRACTOR_CLASS_MAP = {

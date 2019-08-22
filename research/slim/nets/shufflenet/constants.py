@@ -1,12 +1,23 @@
 import tensorflow as tf
 
+DATA_FORMAT = 'channels_last'
+
+# this can be important
+BATCH_NORM_MOMENTUM = 0.999700009823
+
+# it is important to set this value
+BATCH_NORM_EPSILON = 0.0010000000475
+
+
+####################################
+## Unused params below            ##
+####################################
+
 # for fpn only
 MIN_LEVEL = 3
 # the minimal feature stride that will be used is `2**MIN_LEVEL`
 
 DIVISOR = 128
-
-DATA_FORMAT = 'channels_last'
 
 # a small value
 EPSILON = 1e-8
@@ -28,8 +39,3 @@ NEGATIVES_THRESHOLD = 0.5
 # this is used in tf.map_fn when creating training targets or doing NMS
 PARALLEL_ITERATIONS = 8
 
-# this can be important
-BATCH_NORM_MOMENTUM = 0.999700009823
-
-# it is important to set this value
-BATCH_NORM_EPSILON = 0.0010000000475
