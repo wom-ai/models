@@ -364,6 +364,7 @@ class SSDMetaArch(model.DetectionModel):
         computing equalization loss.
     """
     super(SSDMetaArch, self).__init__(num_classes=box_predictor.num_classes)
+    #import pdb; pdb.set_trace()
     self._is_training = is_training
     self._freeze_batchnorm = freeze_batchnorm
     self._inplace_batchnorm_update = inplace_batchnorm_update
@@ -557,8 +558,10 @@ class SSDMetaArch(model.DetectionModel):
     else:
       batchnorm_updates_collections = tf.GraphKeys.UPDATE_OPS
     if self._feature_extractor.is_keras_model:
+      print("self._feature_extractor.is_keras_model")
       feature_maps = self._feature_extractor(preprocessed_inputs)
     else:
+      print("not self._feature_extractor.is_keras_model")
       with slim.arg_scope([slim.batch_norm],
                           is_training=(self._is_training and
                                        not self._freeze_batchnorm),
@@ -611,6 +614,8 @@ class SSDMetaArch(model.DetectionModel):
     Returns:
       a list of pairs (height, width) for each feature map in feature_maps
     """
+    print("feature_maps")
+    print(feature_maps)
     feature_map_shapes = [
         shape_utils.combined_static_and_dynamic_shape(
             feature_map) for feature_map in feature_maps

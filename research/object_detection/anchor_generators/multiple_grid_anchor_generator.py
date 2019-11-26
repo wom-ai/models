@@ -325,18 +325,22 @@ def create_ssd_anchors(num_layers=6,
   for layer, scale, scale_next in zip(
       range(num_layers), scales[:-1], scales[1:]):
     layer_box_specs = []
-    if layer == 0 and reduce_boxes_in_lowest_layer:
-      layer_box_specs = [(0.1, 1.0), (scale, 2.0), (scale, 0.5)]
-    else:
-      for aspect_ratio in aspect_ratios:
+    for aspect_ratio in aspect_ratios:
         layer_box_specs.append((scale, aspect_ratio))
-      # Add one more anchor, with a scale between the current scale, and the
-      # scale for the next layer, with a specified aspect ratio (1.0 by
-      # default).
-      if interpolated_scale_aspect_ratio > 0.0:
-        layer_box_specs.append((np.sqrt(scale*scale_next),
-                                interpolated_scale_aspect_ratio))
+#    if layer == 0 and reduce_boxes_in_lowest_layer:
+#      layer_box_specs = [(0.1, 1.0), (scale, 2.0), (scale, 0.5)]
+#      layer_box_specs = [(0.1, 1.0), (scale, 2.0), (scale, 0.5)]
+#    else:
+#      for aspect_ratio in aspect_ratios:
+#        layer_box_specs.append((scale, aspect_ratio))
+#      # Add one more anchor, with a scale between the current scale, and the
+#      # scale for the next layer, with a specified aspect ratio (1.0 by
+#      # default).
+#      if interpolated_scale_aspect_ratio > 0.0:
+#        layer_box_specs.append((np.sqrt(scale*scale_next),
+#                                interpolated_scale_aspect_ratio))
     box_specs_list.append(layer_box_specs)
-
+  print(box_specs_list)
+#  import pdb; pdb.set_trace()
   return MultipleGridAnchorGenerator(box_specs_list, base_anchor_size,
                                      anchor_strides, anchor_offsets)

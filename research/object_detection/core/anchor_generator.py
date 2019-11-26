@@ -95,11 +95,14 @@ class AnchorGenerator(object):
       ValueError: if the number of feature map shapes does not match the length
         of NumAnchorsPerLocation.
     """
+    print("feature_map_shape_list")
+    print(feature_map_shape_list)
     if self.check_num_anchors and (
         len(feature_map_shape_list) != len(self.num_anchors_per_location())):
       raise ValueError('Number of feature maps is expected to equal the length '
                        'of `num_anchors_per_location`.')
     with tf.name_scope(self.name_scope()):
+      #import pdb; pdb.set_trace()
       anchors_list = self._generate(feature_map_shape_list, **params)
       if self.check_num_anchors:
         with tf.control_dependencies([

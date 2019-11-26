@@ -101,12 +101,15 @@ class SSDMobileNetV2FeatureExtractor(ssd_meta_arch.SSDFeatureExtractor):
       feature_maps: a list of tensors where the ith tensor has shape
         [batch, height_i, width_i, depth_i]
     """
+    print("\textract_features")
     preprocessed_inputs = shape_utils.check_min_image_dim(
         33, preprocessed_inputs)
 
     feature_map_layout = {
-        'from_layer': ['layer_15/expansion_output', 'layer_19', '', '', '', ''],
-        'layer_depth': [-1, -1, 512, 256, 256, 128],
+#        'from_layer': ['layer_15/expansion_output', 'layer_19', '', '', '', ''],
+#        'layer_depth': [-1, -1, 512, 256, 256, 128],
+        'from_layer': ['layer_15/expansion_output', 'layer_19',],
+        'layer_depth': [-1, -1],
         'use_depthwise': self._use_depthwise,
         'use_explicit_padding': self._use_explicit_padding,
     }
@@ -133,4 +136,13 @@ class SSDMobileNetV2FeatureExtractor(ssd_meta_arch.SSDFeatureExtractor):
               insert_1x1_conv=True,
               image_features=image_features)
 
+    print("----------------------------------------------")
+    print("self._min_depth")
+    print(self._min_depth)
+    print("image_features")
+    print(image_features)
+    print("self._depth_multiplier")
+    print(self._depth_multiplier)
+    print("\tfeature_maps.values()")
+    print(feature_maps.values())
     return feature_maps.values()

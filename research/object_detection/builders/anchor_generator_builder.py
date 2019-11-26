@@ -64,6 +64,7 @@ def build(anchor_generator_config):
     if ssd_anchor_generator_config.height_offset:
       anchor_offsets = zip(ssd_anchor_generator_config.height_offset,
                            ssd_anchor_generator_config.width_offset)
+    #import pdb; pdb.set_trace()
     return multiple_grid_anchor_generator.create_ssd_anchors(
         num_layers=ssd_anchor_generator_config.num_layers,
         min_scale=ssd_anchor_generator_config.min_scale,
