@@ -1,7 +1,7 @@
 WARNING:tensorflow:Forced number of epochs for all eval validations to be 1.
 WARNING:tensorflow:Expected number of evaluation epochs is 1, but instead encountered `eval_on_train_input_config.num_epochs` = 0. Overwriting `num_epochs` to 1.
-WARNING:tensorflow:Using temporary folder as model directory: /tmp/tmpv5b_3_ta
-WARNING:tensorflow:Estimator's model_fn (<function create_model_fn.<locals>.model_fn at 0x7f89a00d0048>) includes params argument, but params are not passed to Estimator.
+WARNING:tensorflow:Using temporary folder as model directory: /tmp/tmpsf23bvht
+WARNING:tensorflow:Estimator's model_fn (<function create_model_fn.<locals>.model_fn at 0x7f0260555048>) includes params argument, but params are not passed to Estimator.
 WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
@@ -26,30 +26,30 @@ tf.py_func is deprecated in TF V2. Instead, use
     means `tf.py_function`s can use accelerators such as GPUs as well as
     being differentiable using a gradient tape.
     
-2020-03-05 05:06:13.165380: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
-2020-03-05 05:06:13.300586: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-03-05 05:06:13.301535: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x7f0c4c0 executing computations on platform CUDA. Devices:
-2020-03-05 05:06:13.301561: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
-2020-03-05 05:06:13.321669: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499995000 Hz
-2020-03-05 05:06:13.322095: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x7f74f10 executing computations on platform Host. Devices:
-2020-03-05 05:06:13.322121: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
-2020-03-05 05:06:13.322244: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+2020-05-14 11:45:39.921333: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-05-14 11:45:40.068427: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-14 11:45:40.070516: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x8156c60 executing computations on platform CUDA. Devices:
+2020-05-14 11:45:40.070540: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2020-05-14 11:45:40.112091: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2499995000 Hz
+2020-05-14 11:45:40.112523: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x81bf6b0 executing computations on platform Host. Devices:
+2020-05-14 11:45:40.112550: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2020-05-14 11:45:40.112662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
 name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
 pciBusID: 0000:00:1e.0
 totalMemory: 14.73GiB freeMemory: 14.62GiB
-2020-03-05 05:06:13.322263: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
-2020-03-05 05:06:13.323245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-03-05 05:06:13.323265: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
-2020-03-05 05:06:13.323275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
-2020-03-05 05:06:13.323347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14221 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:1e.0, compute capability: 7.5)
+2020-05-14 11:45:40.112684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2020-05-14 11:45:40.114171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-14 11:45:40.114190: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2020-05-14 11:45:40.114198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2020-05-14 11:45:40.114261: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14221 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:1e.0, compute capability: 7.5)
 WARNING:tensorflow:From /usr/local/lib/python3.5/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use standard file APIs to check for files with this prefix.
-2020-03-05 05:06:16.531560: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice. Error: Pack node (stack_10) axis attribute is out of bounds: 0
-2020-03-05 05:06:16.531616: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice_2. Error: Pack node (stack_10) axis attribute is out of bounds: 0
-2020-03-05 05:06:16.531631: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice_6. Error: Pack node (stack_10) axis attribute is out of bounds: 0
-2020-03-05 05:06:16.531643: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice_7. Error: Pack node (stack_10) axis attribute is out of bounds: 0
-2020-03-05 05:06:17.285558: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2020-05-14 11:45:44.798084: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice. Error: Pack node (stack_10) axis attribute is out of bounds: 0
+2020-05-14 11:45:44.798137: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice_2. Error: Pack node (stack_10) axis attribute is out of bounds: 0
+2020-05-14 11:45:44.798149: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice_6. Error: Pack node (stack_10) axis attribute is out of bounds: 0
+2020-05-14 11:45:44.798161: W ./tensorflow/core/grappler/optimizers/graph_optimizer_stage.h:241] Failed to run optimizer ArithmeticOptimizer, stage RemoveStackStridedSliceSameAxis node ChangeCoordinateFrame/strided_slice_7. Error: Pack node (stack_10) axis attribute is out of bounds: 0
+2020-05-14 11:45:45.534824: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
 
 WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
 For more information, please see:
@@ -63,9 +63,9 @@ creating index...
 index created!
 Running per image evaluation...
 Evaluate annotation type *bbox*
-DONE (t=92.58s).
+DONE (t=86.56s).
 Accumulating evaluation results...
-DONE (t=17.38s).
+DONE (t=16.88s).
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.225
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.392
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.226
@@ -78,3 +78,4 @@ DONE (t=17.38s).
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.069
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.298
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.620
+Elapsed Time: 417 seconds
